@@ -1,0 +1,7 @@
+Line	Purpose	Category
+import numpy as np	Math & Arrays	Computation
+import pandas as pd	Data manipulation	Data handling
+import yfinance as yf	Fetch stock market data	Finance
+import matplotlib.pyplot as plt	Plotting charts	Visualization
+import seaborn as sns	Statistical plotting with style	Visualization
+sns.set()	Set prettier default plot styles	Styling
