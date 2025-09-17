@@ -5,3 +5,23 @@ import yfinance as yf	Fetch stock market data	Finance
 import matplotlib.pyplot as plt	Plotting charts	Visualization
 import seaborn as sns	Statistical plotting with style	Visualization
 sns.set()	Set prettier default plot styles	Styling
+
+
+import numpy as np
+import pandas as pd
+import yfinance as yf
+import matplotlib.pyplot as plt
+import seaborn as sns
+sns.set()
+
+assets = ['MSFT', 'AAPL', 'AMZN', 'TSLA', 'GOOGL'] # Assets for portfolio
+w = np.array([0.1, 0.2, 0.1, 0.4, 0.2]) # Weights of each asset
+
+asset_prices = yf.download(assets, start='2018-01-01', end='2023-01-01', auto_adjust = False)['Adj Close'] # Downloading daily data
+asset_prices.index = pd.to_datetime(asset_prices.index) # Setting index as datetime object
+r = asset_prices.pct_change().dropna() # Calculating daily percent returns
+r.head() # Each column is r_{i}
+
+r_port = r @ w # Creating portfolio returns
+r_port.name = 'portfolio_returns'
+r_port.head()
