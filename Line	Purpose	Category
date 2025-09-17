@@ -6,6 +6,15 @@ import matplotlib.pyplot as plt	Plotting charts	Visualization
 import seaborn as sns	Statistical plotting with style	Visualization
 sns.set()	Set prettier default plot styles	Styling
 
+def 
+(Step	Action	Purpose
+1	Import libraries	Set up tools for finance, math, and plotting
+2	Define assets and w	Choose stocks and set weights
+3	Download prices with yfinance	Get historical stock prices
+4	Convert index to datetime	Enable time-based analysis
+5	Calculate r	Compute daily stock returns
+6	Compute r_port	Get total daily portfolio return
+7	Inspect results	See the first few rows for confirmation)
 
 import numpy as np
 import pandas as pd
