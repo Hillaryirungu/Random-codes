@@ -1,0 +1,12 @@
+import yfinance as yf
+import pandas as pd
+
+# Download AAPL data with adjusted prices (includes dividends & splits)
+data = yf.download('AAPL', start='2022-01-01', end='2022-12-31', auto_adjust=True)
+
+# Show first few rows
+print(data.head())
+
+# Save to Excel or CSV
+data.to_csv('AAPL_adjusted.csv')      # Saves as CSV
+# data.to_excel('AAPL_adjusted.xlsx') # Uncomment to save as Excel file
